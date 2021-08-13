@@ -1,5 +1,5 @@
 <?php 
-$tikapp = '1938489480:AAEeGOblhQSM9YtIqfz415maVPMoN28Hn_M'
+$tikapp = 1938489480:AAEeGOblhQSM9YtIqfz415maVPMoN28Hn_M'
 ##------------------------------##
 define('API_KEY',$tikapp);
 function bot($method,$datas=[]){
@@ -50,7 +50,7 @@ if(preg_match('/^\/([Ss]tart)/',$text)){
       'reply_markup'=>json_encode([
             'inline_keyboard'=>[
               [
-              ['text'=>"Kanalimiz ",'url'=>"http://telegram.me/phpkodlar_baza"],['text'=>"2-Kanal",'url'=>"http://telegram.me/Yagzo_Guruhi_Doxxim"]
+              ['text'=>"Kanalimiz ",'url'=>"http://telegram.me/phpkodlar_baza"],['text'=>"2-Kanal",'url'=>"http://telegram.me/Yagzon_Guruhi_Doxxim"]
               ]
               ]
         ])
@@ -61,7 +61,5 @@ else
 $text = $message->text;
 	$vo = file_get_contents('http://tts.baidu.com/text2audio?lan=en&ie=UTF-8&text='.urlencode($text));
  file_put_contents('vo.ogg',$vo);
-		   sendvoice($chat_id , new CURLFile('vo.ogg') , '@Phpkodlar_baza');
-    }
-//====================ᵗᶦᵏᵃᵖᵖ======================//
+		   sendvoice($chat_id , new CURLFile('vo.ogg') 
 		?>
